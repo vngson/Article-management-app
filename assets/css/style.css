@@ -1,0 +1,260 @@
+:root {
+    --header-height: 80px;
+    --nav-top-cus-height: 60px;
+    --white: #fff;
+    --black: #000;
+    --red: red;
+    --background-color-1: rgb(241, 90, 36);
+    --purple: rgb(58, 55, 193);
+    --green: rgb(61, 219, 145);
+    --orange: rgb(241, 186, 83);
+    --blue: #0ea5e9;
+    --gray: #9e9e9e;
+    --gray--trans: rgba(158, 158, 158, 0.7);
+    --pastel: #EF9595;
+    --nav-top-gradient: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(58, 55, 193, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    background-color: var(--white) !important;
+    user-select: none !important;
+}
+
+button {
+    user-select: none;
+    cursor: pointer;
+}
+
+Link,
+buttonm,
+a {
+    text-decoration: none !important;
+}
+
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px var(--black);
+    font-size: 1.6rem;
+}
+
+.navbar{
+    padding: 10px 80px;
+}
+
+.logo_web {
+    height: 60px;
+    object-fit: contain;
+    padding-right: 20px;
+    border-right: solid 1px var(--black);
+}
+
+.navbar-nav{
+    width: 100%;
+    padding: 0 10px;
+}
+
+.nav-item-end{
+    display: flex;
+    margin-right: 40px;
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    color: var(--black) !important;
+    font-weight: normal !important;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    padding: 20px 80px;
+}
+
+
+.home {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.home__title, .search_title, .add_paper__title, .login__title, .view_paper__title{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.home__paper_topic, .author_list_paper {
+    width: 100%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-left: solid 4px var(--background-color-1);
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.home__paper_list{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4);
+    row-gap: auto;
+    grid-gap: 20px;
+    margin-bottom: 10px;
+}
+
+.home__paper{
+    width: 290px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: var(--black);
+    border: solid 1px var(--gray);
+    border-radius: 0 0 10px 10px;
+}
+
+.home__paper--title{
+    padding: 10px;
+    height: 70px;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    background-color: var(--background-color-1);
+    color: var(--white);
+}
+
+.home__paper--abstract{
+    padding: 10px;
+    height: 100px;
+    font-size: 1.6rem;
+}
+
+.search-top{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    font-size: 1.6rem !important;
+}
+
+#searchForm{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchForm_input{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn-search, .btn-add-paper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    font-size: 1.6rem !important;
+}
+
+#searchResults{
+    border-top: solid 1px var(--black);
+    display: flex;
+}
+
+.profile{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.profile_avt{
+    height: 200px;
+    object-fit: contain;
+}
+
+.profile__info{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    gap: 10px;
+}
+
+.profile_action{
+    display: flex;
+    gap: 20px;
+}
+
+.profile_action-btn{
+    display: flex;
+    font-size: 1.6rem !important;
+    padding: 5px 20px;
+}
+
+.add_paper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.6rem;
+    align-items: center;
+    margin: auto;
+}
+
+.view_paper{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.6rem;
+    margin: auto;
+}
+
+.add_paper_form, .add_paper_form>input, .add_paper_form>textarea, .add_paper_form>select{
+    width: 400px;
+}
+
+.form-group{
+    width: 300px;
+}
+
+.login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: auto;
+    font-size: 1.6rem;
+}
